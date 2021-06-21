@@ -1,5 +1,4 @@
 import requests
-#import os
 from datetime import datetime
 
 api_key = 'e9e795ab84daca0ac5ee506a6975bb2c'
@@ -24,12 +23,13 @@ print ("Current temperature is: {:.2f} deg C".format(temp_city))
 print ("Current weather desc  :",weather_desc)
 print ("Current Humidity      :",hmdt, '%')
 print ("Current wind speed    :",wind_spd ,'kmph')
+str0 = str(location)
 str1 = str(date_time)
 str2 = str(temp_city)
 str3 = str(hmdt)
 str4 = str(weather_desc)
 str5 = str(wind_spd)
-L = [str1, "\t", str2, "\t", str3,"\t", str4,"\t", str5]
+L = [str0, "\t", str1, "\t", str2, "\t", str3,"\t", str4,"\t", str5]
 with open('weatherfile.txt','a') as file:
  file.writelines(L)
  file.write("\n")
